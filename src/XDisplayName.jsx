@@ -17,6 +17,7 @@ export default function DisplayName(){
         e.preventDefault();
         if(!firstName || !lastName){
             setFullName("") 
+            return
         }
         setFullName(`Full Name: ${firstName} ${lastName}`);
     }
