@@ -15,8 +15,9 @@ export default function DisplayName(){
 
     const submitHandler = (e) => {
         e.preventDefault();
-        const fullName = `Full Name: ${firstName} ${lastName}`;
-        setFullName(fullName);
+        if(!firstName || !lastName){setFullName("") return}
+        const finalName = `Full Name: ${firstName} ${lastName}`;
+        setFullName(finalName);
         
         
     }
