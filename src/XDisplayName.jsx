@@ -32,7 +32,7 @@ export default function DisplayName(){
             <input type="text" onChange={lastNameHandler} required/> <br />
             <button type="submit">Submit</button> <br />
         </form>
-        <h1>{fullName}</h1> 
+        {fullName && <h1>{fullName}</h1>}
         </>
     )
 }
