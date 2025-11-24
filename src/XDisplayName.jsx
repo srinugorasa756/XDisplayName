@@ -16,7 +16,9 @@ export default function DisplayName(){
     const submitHandler = (e) => {
         e.preventDefault();
         const fullName = `Full Name: ${firstName} ${lastName}`;
-        setFullName(fullName)
+        setFullName(fullName);
+        
+        
     }
 
     return(
@@ -29,7 +31,7 @@ export default function DisplayName(){
             <input type="text" onChange={lastNameHandler} required/> <br />
             <button type="submit">Submit</button> <br />
         </form>
-        <h1>{fullName}</h1> 
+        <h1>{(firstName && lastName && fullName)}</h1> 
         </>
     )
 }
