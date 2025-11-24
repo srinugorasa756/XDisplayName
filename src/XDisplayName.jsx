@@ -15,11 +15,11 @@ export default function DisplayName(){
 
     const submitHandler = (e) => {
         e.preventDefault();
-        if(!firstName || !lastName){setFullName("") return}
-        const finalName = `Full Name: ${firstName} ${lastName}`;
-        setFullName(finalName);
-        
-        
+        if(!firstName || !lastName){
+            setFullName("") 
+            return
+        }
+        setFullName(`Full Name: ${firstName} ${lastName}`);
     }
 
     return(
